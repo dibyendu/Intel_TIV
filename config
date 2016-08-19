@@ -1,0 +1,4 @@
+sudo apt-get install openjdk-7-jdk
+sudo apt-get install ant
+
+export MICROTESK_HOME=/home/dibyendu/Desktop/microtesk-2.3.0-alpha-150904
