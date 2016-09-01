@@ -1,19 +1,30 @@
-# Intel_TIV
+TIV (Intel)
+=============
+* Tools required:
+   - python 2.7
+   - java 1.7
+   - ant
+   - flex
+   - bison
 
-`sudo apt-get install openjdk-7-jdk`
+Build Instructions
+=====================
 
-`sudo apt-get install ant`
+`./configure`
 
-`sudo apt-get install flex`
+Run Instructions
+====================
+`cd src`
 
-`sudo apt-get install bison`
+`./driver.py -h` (will show all the required parameters)
 
-`export MICROTESK_HOME=/home/dibyendu/Desktop/microtesk-2.3.0-alpha`
+`./driver.py <DOMAIN_FILE_FOR_FF_PLANNER> <PROBLEM_FILE_FOR_FF_PLANNER>`
 
-`cd $MICROTESK_HOME`
+Test
+====================
+For testing purpose we've provided 3 sample input files in the directory `ff_planner_input_files`.
 
-`sh bin/compile.sh arch/arm/model/arm.nml`
+`.src/driver.py ff_planner_input_files/arm_domain.pddl ff_planner_input_files/arm_problem_1`
 
-`sh bin/generate.sh arm arch/arm/templates/euclid.rb`
 
-`./ff -o arm_domain.pddl -f arm_problem_case_2`
+If everything goes correct, this will generate an `.asm` file in the `src` directory, which is the output of the tool.

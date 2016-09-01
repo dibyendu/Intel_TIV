@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import re, argparse, subprocess
+
+parser = argparse.ArgumentParser()
+parser.add_argument("domain_file", type=str, help="path to the domain file used by the ff planner")
+parser.add_argument("problem_file", type=str, help="path to the problem file used by the ff planner")
+parser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
+
+args = parser.parse_args()
+
+ff_planner_args = ['@FF_ROOT@/ff', '-o', args.domain_file, '-f', args.problem_file]
+
+'''
+export MICROTESK_HOME=@MICROTESK_ROOT@
+sh bin/generate.sh arm arch/arm/templates/euclid.rb
+'''
+
+proc = subprocess.Popen(ff_planner_args, stdout=subprocess.PIPE)
+lines = proc.stdout.read()
+searchStr = re.search( r'.*ff:\ found\ legal\ plan\ as\ follows\n\nstep(.*)time\ spent.*', lines, re.S).group(1)
+actions = map(lambda x: x.partition(':')[2].strip().lower(), [line.strip() for line in searchStr.split('\n') if line.strip()])
+plan = '\n'.join([''.join([action.split()[0]] + map(lambda x: '(' + x + ')', action.split()[1:])) for action in actions])
+
+print plan

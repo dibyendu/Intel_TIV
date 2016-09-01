@@ -1,0 +1,21 @@
+(define (problem case_study_2)
+(:domain arm_domain)
+(:objects x y - data)
+(:init 
+	
+	
+	(d_cache_avail)
+	(not (valid_addr y))
+	(valid_addr x)
+	
+	(DMA_descriptor)
+	(DMA_En)
+	(Device_En)
+)
+
+(:goal (and 
+	
+	(writeReq x)
+	(readReqAck x))
+)
+)
