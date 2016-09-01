@@ -3536,13 +3536,13 @@ $as_echo "no" >&6; }
 fi
 
 
-if test "$PYTHON" == x"no"
+if test x"$PYTHON" == x"no"
 then
   as_fn_error $? "Please install python (version 2.7) before installing.\"" "$LINENO" 5
 fi
 
-# Extract the first word of "java", so it can be a program name with args.
-set dummy java; ac_word=$2
+# Extract the first word of "javac", so it can be a program name with args.
+set dummy javac; ac_word=$2
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
 $as_echo_n "checking for $ac_word... " >&6; }
 if ${ac_cv_prog_JAVA+:} false; then :
@@ -3579,9 +3579,9 @@ $as_echo "no" >&6; }
 fi
 
 
-if test "$JAVA" == x"no"
+if test x"$JAVA" == x"no"
 then
-  as_fn_error $? "Please install java (version 1.7) before installing ... on a debian system run \"sudo apt-get install openjdk-7-jdk\"" "$LINENO" 5
+  as_fn_error $? "Please install jdk (version 1.7) before installing ... on a debian system run \"sudo apt-get install openjdk-7-jdk\"" "$LINENO" 5
 fi
 
 # Extract the first word of "ant", so it can be a program name with args.
@@ -3622,7 +3622,7 @@ $as_echo "no" >&6; }
 fi
 
 
-if test "$ANT" == x"no"
+if test x"$ANT" == x"no"
 then
   as_fn_error $? "Please install ant before installing ... on a debian system run \"sudo apt-get install ant\"" "$LINENO" 5
 fi
