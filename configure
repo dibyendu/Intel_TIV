@@ -610,8 +610,7 @@ CPPFLAGS
 LDFLAGS
 CFLAGS
 CC
-FF_ROOT
-MICROTESK_ROOT
+ROOT
 AM_BACKSLASH
 AM_DEFAULT_VERBOSITY
 AM_DEFAULT_V
@@ -2452,9 +2451,7 @@ END
   fi
 fi
 
-MICROTESK_ROOT=`pwd`/microtesk-2.3.0-alpha
-FF_ROOT=`pwd`/FF-v2.3
-
+ROOT=`pwd`
 
 
 # Checks for programs.

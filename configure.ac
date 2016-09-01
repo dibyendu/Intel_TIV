@@ -2,10 +2,8 @@ AC_PREREQ(2.69)
 AC_INIT([TIV], [1.0])
 AM_INIT_AUTOMAKE
 
-MICROTESK_ROOT=`pwd`/microtesk-2.3.0-alpha
-FF_ROOT=`pwd`/FF-v2.3
-AC_SUBST(MICROTESK_ROOT)
-AC_SUBST(FF_ROOT)
+ROOT=`pwd`
+AC_SUBST(ROOT)
 
 # Checks for programs.
 AC_PROG_CC

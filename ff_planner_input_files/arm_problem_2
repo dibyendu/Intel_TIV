@@ -2,8 +2,6 @@
 (:domain arm_domain)
 (:objects x y - data)
 (:init 
-	
-	
 	(d_cache_avail)
 	(not (valid_addr y))
 	(valid_addr x)

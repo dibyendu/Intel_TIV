@@ -1,7 +1,6 @@
-import sys
-#import pickle
-#import os
-import ConditionsModule
+#!/usr/bin/env python
+
+import sys, ConditionsModule
 
 def GetActionLibrary(actions):
     actionLibrary={} # Dictionary of actions and their pre and post conditions
@@ -14,14 +13,12 @@ def GetActionLibrary(actions):
     return actionLibrary
 
 testPlan = str(sys.argv[1])
-#PlanInitialCondition = pickle.load(open('PlanInitialCondition','rb')) # loaded the PlanInitialCondition dumped by Algo1.py
 f = open(testPlan,'r')   # open the plan file generated.
 g = f.readlines()          # read the plan.txt file
-h = open('TestTemplate.rb','w+')   # create the test template file to be generated
-#armInstructions = getInstructions()
-templateFile = open('Template_Database.txt','r') # Open the template database
+h = open(str(sys.argv[2]) + '/src/microtesk_template_generator/Template.rb','w+')   # create the test template file to be generated
+templateFile = open(str(sys.argv[2]) + '/src/microtesk_template_generator/Template_Database.txt','r') # Open the template database
 templates = templateFile.readlines() # read all lines in the template database
-actionFile = open('Action_Database.txt','rb') # Open the action database
+actionFile = open(str(sys.argv[2]) + '/src/microtesk_template_generator/Action_Database.txt','rb') # Open the action database
 actions = actionFile.readlines() # read all lines in the action database
 registersActive = [0,0,0,0,0,0,0,0,0,0,0,0,0]  # shows what registers are active currently, 0= inactive, 1= active
 
@@ -107,5 +104,3 @@ for line in g: # iterating through the plan and writing the template for each ac
         registersActive[i]=0
 h.write('end\nend') # writing the last parts of the test template file and closing it.
 h.close()
-#print "OPENING THE COMPILED TEST TEMPLATE..."
-#os.system("gnome-open TestTemplate.rb")

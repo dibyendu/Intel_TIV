@@ -1,14 +1,18 @@
 readmiss(*)###(1..100).each do |it|###val1 = rand(33, 63)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val1)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###0
 load_d_cache###(1..100).each do |it|###val1 = rand(1, 63)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val1)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###0
 lru_selection(*)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###ADD_IMMEDIATE blank, setsOff, REG(10), REG(10), IMMEDIATE(0, $$$)###STR_IMMEDIATE_OFF blank, REG(10), 8, setUoff, 4###(1..100).each do |it|###val3 = rand(33, 255)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val3)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###0
+lru_selection(*)(#)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###ADD_IMMEDIATE blank, setsOff, REG(10), REG(10), IMMEDIATE(0, $$$)###STR_IMMEDIATE_OFF blank, REG(10), 8, setUoff, 4###(1..100).each do |it|###val3 = rand(33, 255)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val3)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###0
 modify(*)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###ADD_IMMEDIATE blank, setsOff, REG(10), REG(10), IMMEDIATE(0, 1)###STR_IMMEDIATE_OFF blank, REG(10), 8, setUoff, 4###0
 write_r(*)###0
 write_n(*)###val5 = rand(1, 255)###EOR           blank, setsOff, REG(8), REG(8), register0###EOR           blank, setsOff, REG(9), REG(9), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###ADD_IMMEDIATE blank, setsOff, REG(10), REG(9), IMMEDIATE(0, val5)###STR_IMMEDIATE_OFF blank, REG(10), 8, setUoff, 4###0
 read(*)###(1..100).each do |it|###val1 = rand(33, 255)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val1)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###0
 channel_block###0
+timeout(*)###0
 timeout(addr(*))###0
+self_refresh(*)###0
 self_refresh(addr(*))###0
 cke_high###0
+cke_high(*)###0
 writebuffer(*)###0
 writebackhit(*)###(1..100).each do |it|###val7 = rand(33, 255)###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, val7)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###end###EOR           blank, setsOff, REG(8), REG(8), register0###ADD_IMMEDIATE blank, setsOff, REG(8), REG(8), IMMEDIATE(0, $$$)###LDR_IMMEDIATE_OFF blank, REG(10), 8, 4, setUoff###0
 readreqserve(*)###0
