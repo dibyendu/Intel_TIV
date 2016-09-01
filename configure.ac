@@ -11,19 +11,19 @@ AC_SUBST(FF_ROOT)
 AC_PROG_CC
 
 AC_CHECK_PROG(PYTHON, python, yes, no)
-if test "$PYTHON" == x"no"
+if test x"$PYTHON" == x"no"
 then
   AC_MSG_ERROR([Please install python (version 2.7) before installing."])
 fi
 
-AC_CHECK_PROG(JAVA, java, yes, no)
-if test "$JAVA" == x"no"
+AC_CHECK_PROG(JAVA, javac, yes, no)
+if test x"$JAVA" == x"no"
 then
-  AC_MSG_ERROR([Please install java (version 1.7) before installing ... on a debian system run "sudo apt-get install openjdk-7-jdk"])
+  AC_MSG_ERROR([Please install jdk (version 1.7) before installing ... on a debian system run "sudo apt-get install openjdk-7-jdk"])
 fi
 
 AC_CHECK_PROG(ANT, ant, yes, no)
-if test "$ANT" == x"no"
+if test x"$ANT" == x"no"
 then
   AC_MSG_ERROR([Please install ant before installing ... on a debian system run "sudo apt-get install ant"])
 fi
